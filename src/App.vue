@@ -1,19 +1,16 @@
 <template>
   <v-app>
-          <PmHeader/>
+    <PmHeader/>
     <router-view></router-view>
     <v-container >
-        <v-row>
-          <v-col
-          class="columns"
-          ></v-col>
-        </v-row>
-
+      <v-row>
+        <v-col
+        class="columns"
+        ></v-col>
+      </v-row>
     </v-container>
-
-      <PmFooter/>
+    <PmFooter/>
   </v-app>
-  
 </template>
 
 <script>
@@ -36,7 +33,7 @@ import PmHeader from  './components/layout/Header.vue'
 .buttonSearch{
   margin-top: 10px;
 
-  .isActive{
+.isActive{
     border: 3px rgb(0, 38, 255) solid;
   }
 }

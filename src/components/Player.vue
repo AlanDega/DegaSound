@@ -1,24 +1,20 @@
 <template>
     <div>
-
-     <v-container v-if="track && track.album"
->
- <v-row
- align="center"
- justify="center"
- >
-     <v-col cols="6" align="center" justify="center">
-         <v-img
-         class="img" 
-         :src="track.album.images[0].url"
-         ></v-img>
-         <p> {{track.name }}</p>
-         <p>{{track.duration_ms | ms-to-mm }}</p>
-         <p><audio controls :src="track.preview_url"></audio></p>
-     </v-col>
- </v-row>
-         
-     </v-container>
+        <v-container v-if="track && track.album">
+            <v-row
+            align="center"
+            justify="center">
+                <v-col cols="6" align="center" justify="center">
+                    <v-img
+                    class="img" 
+                    :src="track.album.images[0].url"
+                    ></v-img>
+                    <p> {{track.name }}</p>
+                    <p>{{track.duration_ms | ms-to-mm }}</p>
+                    <p><audio controls :src="track.preview_url"></audio></p>
+                </v-col>
+            </v-row>
+        </v-container>
     </div>
 </template>
 

@@ -1,30 +1,29 @@
 <template>
-<div>
-         <pm-notification v-show="showNotification"  />
-    <v-container app>
-      <v-row>
-        <v-col cols="12">
-   <v-text-field
+  <div>
+    <pm-notification v-show="showNotification"  />
+      <v-container app>
+        <v-row>
+          <v-col cols="12">
+            <v-text-field
             @keyup.enter="search"
             v-model="searchQuery"
             outlined
             label="Busca tú música favorita aquí"
             clearable
             clear-icon="mdi-close-circle-outline"
-          ></v-text-field>
-          <v-row 
-          justify="end"
-          >
+            ></v-text-field>
+            <v-row 
+            justify="end"
+            >
               <v-btn @click="search" dark="">Buscar</v-btn>
-              </v-row>
-            </v-col>
-          </v-row>
-    </v-container>
+            </v-row>
+          </v-col>
+        </v-row>
+      </v-container>
     <pm-loader v-show="isLoading" />
     <v-container v-show="!isLoading">
       <v-row>
         <v-col 
-        
         cols="4"
         v-for="t in tracks"
         >
@@ -33,13 +32,10 @@
         :class="{'isActive': t.id === selectedTrack }"
          :track="t"
           @select="setSelectedTrack"> </PmTrack>
-
         </v-col>
       </v-row>
-
     </v-container>
   </div>
-  
 </template>
 
 <script>
