@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # services
 
 ## Project setup
@@ -27,3 +28,7 @@ yarn run lint
 
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
+=======
+# DegaSound
+En esta aplicación consumí la API REST de Spotify con Trae y API fetch. 
+>>>>>>> 3734ba41ec14a76e01d10f61db515beac9c013e7
